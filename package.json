@@ -1,0 +1,13 @@
+{
+  "name": "arsii-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "packageManager": "pnpm@8.8.0",
+  "scripts": {
+    "dev:front": "pnpm --filter frontend run dev",
+    "build:front": "pnpm --filter frontend run build",
+    "lint:front": "pnpm --filter frontend run lint",
+    "preview:front": "pnpm --filter frontend run preview"
+  }
+}
