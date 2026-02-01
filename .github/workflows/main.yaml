@@ -22,6 +22,7 @@ jobs:
   call-frontend:
     # needs: call-backend
     uses: ./.github/workflows/_frontend.yml
+    secrets: inherit
 
   deploy_site:
     needs: call-frontend

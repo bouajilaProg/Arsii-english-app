@@ -40,6 +40,14 @@ jobs:
 
       - name: Build frontend
         run: pnpm --filter frontend run build
+        env:
+          NODE_OPTIONS: "--max_old_space_size=4096"
+
+      - name: Fix permissions
+        run: |
+          chmod -c -R +rX "frontend/dist/" | while read line; do
+            echo "::debug::$line"
+          done
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
