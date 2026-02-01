@@ -4,7 +4,6 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Arsii-english-app/',
   plugins: [
     react(),
     VitePWA({
@@ -13,7 +12,7 @@ export default defineConfig({
       manifest: {
         name: 'Arsii English App',
         short_name: 'Arsii',
-        description: 'Arsii English Language Learning App',
+        description: 'Arsii English Learning Application',
         theme_color: '#ffffff',
         icons: [
           {
